@@ -1,0 +1,90 @@
+[project]
+name = "django-template"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "boto3>=1.35.91",
+  "cryptography>=44.0.0",
+  "django>=5.1.4",
+  "django-allauth>=65.3.1",
+  "django-cors-headers>=4.6.0",
+  "django-environ>=0.11.2",
+  "django-ninja>=1.3.0",
+  "django-ninja-crud>=0.6.2",
+  "django-storages>=1.14.4",
+  "django-timezone-field>=7.0",
+  "hiredis>=3.1.0",
+  "inflection>=0.5.1",
+  "pillow>=11.1.0",
+  "psycopg>=3.2.3",
+  "pydantic>=2.10.4",
+  "pydantic-extra-types>=2.10.1",
+  "pyjwt>=2.10.1",
+  "redis>=5.2.1",
+  "requests>=2.32.3",
+  "tzdata>=2024.2",
+]
+
+[dependency-groups]
+dev = ["django-query-inspector>=1.3.0", "pre-commit>=4.0.1", "ruff>=0.8.5"]
+
+
+[tool.ruff]
+exclude = [".venv", ".git", ".vscode", "media", "static", "*/migrations/*"]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+ignore = ["D100", "D104", "D106", "E501", "TRY003"]
+# See Rules: https://docs.astral.sh/ruff/rules/
+select = [
+  "F",    # Pyflakes
+  "E",    # pycodestyle - Error
+  "W",    # pycodestyle - Warning
+  "C901", # McCabe complex-structure
+  "I",    # isort
+  "N",    # pep8-naming
+  "D",    # pydocstyle
+  "UP",   # pyupgrade
+  "ANN",  # flake8-annotations
+  "S",    # flake8-bandit
+  "A",    # flake8-builtins
+  "COM",  # flake8-commas
+  "C4",   # flake8-comprehensions
+  "DTZ",  # flake8-datetimez
+  "T10",  # flake8-debugger
+  "DJ",   # flake8-django
+  "LOG",  # flake8-logging
+  "G",    # flake8-logging-format
+  "INP",  # flake8-no-pep420
+  "PIE",  # flake8-pie
+  "T20",  # flake8-print
+  "PYI",  # flake8-pyi
+  "RSE",  # flake8-raise
+  "RET",  # flake8-return
+  "SLOT", # flake8-slot
+  "SIM",  # flake8-simplify
+  "TID",  # flake8-tidy-imports
+  "TC",   # flake8-type-checking
+  "INT",  # flake8-gettext
+  "ARG",  # flake8-unused-arguments
+  "PTH",  # flake8-use-pathlib
+  "TD",   # flake8-todo
+  "ERA",  # flake8-eradicate
+  "PL",   # pylint
+  "TRY",  # tryceratops
+  "PERF", # Perflint
+  "RUF",  # ruff
+]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+detect-same-package = true
+split-on-trailing-comma = true

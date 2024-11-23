@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        // [VSCode] Test Explorer
+        "hbenl.vscode-test-explorer",
+        // [Python] Language Server
+        "ms-python.vscode-pylance",
+        // [Python] Linter and Formatter
+        "charliermarsh.ruff",
+        // [Python] Test Adapter
+        "littlefoxteam.vscode-python-test-adapter",
+        // [Toml] Language Server
+        "tamasfe.even-better-toml"
+    ]
+}
