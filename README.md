@@ -1,0 +1,36 @@
+## 開發
+
+### 建置環境
+
+1. 請確保你有安裝 `poetry`，然後執行 `poetry env use 3.13` 來安裝 python3.13 虛擬環境
+
+   > 建議使用 `pyenv` 來管理你的 python 版本，並使用 `poetry` 來建置虛擬環境.
+
+2. 資料庫遷移
+
+   1. `python manage.py makemigrations`
+
+   2. `python manage.py migrate`
+
+### 啟用虛擬環境
+
+`poetry shell` 或 `source .venv/bin/activate`
+
+### 在本地運行服務
+
+`python manage.py runserver`
+
+### 翻譯
+
+1. 若要新增語言
+
+   1. 請於 [config/settings/base.py:64](/config/settings/base.py#L64) 新增語言
+
+   > 格式為 ([language code](https://docs.djangoproject.com/en/dev/topics/i18n/#term-language-code), 語言名字) \
+   > 語言名字將會使用 i18n 來處理
+
+   2. 並執行 `python manage.py makemessages -l <language code>`
+
+2. 若有新增語言或更新文本原始碼，請執行 `python manage.py makemessages --all` 來更新 `.po` 翻譯檔
+
+3. 翻譯完畢後，請執行 `python manage.py compilemessages` 來編譯翻譯檔

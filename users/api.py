@@ -1,0 +1,24 @@
+from django.core.handlers.wsgi import WSGIRequest
+from django.core.handlers.asgi import ASGIRequest
+from ninja import Router
+from ninja_crud import views, viewsets
+
+from users.models import User
+from users.schemas import UserFilterSchema, UserRequestSchema, UserResponseSchema
+
+
+router = Router()
+
+class UserViewSet(viewsets.APIViewSet):
+    router = router
+    model = User
+    default_request_body = UserRequestSchema
+    default_response_body = UserResponseSchema
+
+    list_users = views.ListView(
+        query_parameters=UserFilterSchema,
+    )
+    create_user = views.CreateView()
+    read_user = views.ReadView()
+    update_user = views.UpdateView()
+    delete_user = views.DeleteView()
