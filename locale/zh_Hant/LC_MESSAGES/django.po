@@ -1,0 +1,98 @@
+# Copyright (C) 2024 Planovate
+# This file is distributed under the same license as the PACKAGE package.
+# Planovate <info@planovateai.com>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-18 02:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Planovate <info@planovateai.com>\n"
+"Language-Team: Planovate <info@planovateai.com>\n"
+"Language: 繁體中文\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\config\api.py:9
+msgid "User"
+msgstr "用戶"
+
+#: .\config\settings\base.py:65
+msgid "English"
+msgstr "英文"
+
+#: .\config\settings\base.py:66
+msgid "Japanese"
+msgstr "日文"
+
+#: .\config\settings\base.py:67
+msgid "Traditional Chinese"
+msgstr "繁體中文"
+
+#: .\users\admin.py:14
+msgid "Basic"
+msgstr "基本"
+
+#: .\users\apps.py:8
+msgid "Users App"
+msgstr "用戶"
+
+#: .\users\forms.py:30
+msgid "This email has already been taken."
+msgstr "此電子郵件已被使用。"
+
+#: .\users\managers.py:14
+msgid "The given email must be set"
+msgstr "必須提供給定的電子郵件"
+
+#: .\users\managers.py:32
+msgid "Superuser must have is_staff=True."
+msgstr "超級用戶必須設置 is_staff=True。"
+
+#: .\users\managers.py:34
+msgid "Superuser must have is_superuser=True."
+msgstr "超級用戶必須設置 is_superuser=True。"
+
+#: .\users\models.py:13
+msgid "username"
+msgstr "用戶名"
+
+#: .\users\models.py:17
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "必填。150 個字符以內。僅限字母、數字和 @/./+/-/_。"
+
+#: .\users\models.py:21
+msgid "A user with that username already exists."
+msgstr "具有該用戶名的用戶已存在。"
+
+#: .\users\models.py:25
+msgid "email address"
+msgstr "電子郵件地址"
+
+#: .\users\models.py:29
+msgid "password"
+msgstr "密碼"
+
+#: .\users\models.py:33
+msgid "last login"
+msgstr "上次登錄"
+
+#: .\users\models.py:39
+msgid "avatar"
+msgstr "頭像"
+
+#: .\users\models.py:44
+msgid "time zone"
+msgstr "時區"
+
+#: .\users\models.py:61
+msgid "user"
+msgstr "使用者"
+
+#: .\users\models.py:62
+msgid "users"
+msgstr "使用者"
